@@ -1,0 +1,207 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/roboto';
+@import 'weathericons/css/weather-icons-wind.min.css';
+@import 'weathericons/css/weather-icons.min.css';
+
+@layer base {
+    @theme {
+        --font-sans: 'Roboto Variable', sans-serif;
+    }
+
+    html, body {
+        @apply overflow-hidden scroll-smooth antialiased bg-linear-to-b from-slate-900 to-gray-950 text-slate-100 h-screen;
+    }
+}
+
+@layer components {
+    .bg-weather {
+        @apply bg-contain bg-no-repeat bg-center;
+    }
+
+    .lg-weather {
+        @apply w-70 h-70;
+    }
+
+    .sm-weather {
+        @apply w-15 h-15;
+    }
+
+    .lg-mcons {
+        @apply absolute -left-6 -top-11.5 opacity-20;
+    }
+
+    .o000 {
+        @apply bg-[url('./components/openweathermap/icons/outline/000.svg')];
+    }
+
+    .o01d {
+        @apply bg-[url('./components/openweathermap/icons/outline/01d.svg')];
+    }
+
+    .o01n {
+        @apply bg-[url('./components/openweathermap/icons/outline/01n.svg')];
+    }
+
+    .o02d {
+        @apply bg-[url('./components/openweathermap/icons/outline/02d.svg')];
+    }
+
+    .o02n {
+        @apply bg-[url('./components/openweathermap/icons/outline/02n.svg')];
+    }
+
+    .o03d {
+        @apply bg-[url('./components/openweathermap/icons/outline/03d.svg')];
+    }
+
+    .o03n {
+        @apply bg-[url('./components/openweathermap/icons/outline/03n.svg')];
+    }
+
+    .o04d {
+        @apply bg-[url('./components/openweathermap/icons/outline/04d.svg')];
+    }
+
+    .o04n {
+        @apply bg-[url('./components/openweathermap/icons/outline/04n.svg')];
+    }
+
+    .o09d {
+        @apply bg-[url('./components/openweathermap/icons/outline/09d.svg')];
+    }
+
+    .o09n {
+        @apply bg-[url('./components/openweathermap/icons/outline/09n.svg')];
+    }
+
+    .o10d {
+        @apply bg-[url('./components/openweathermap/icons/outline/10d.svg')];
+    }
+
+    .o10n {
+        @apply bg-[url('./components/openweathermap/icons/outline/10n.svg')];
+    }
+
+    .o11d {
+        @apply bg-[url('./components/openweathermap/icons/outline/11d.svg')];
+    }
+
+    .o11n {
+        @apply bg-[url('./components/openweathermap/icons/outline/11n.svg')];
+    }
+
+    .o13d {
+        @apply bg-[url('./components/openweathermap/icons/outline/13d.svg')];
+    }
+
+    .o13n {
+        @apply bg-[url('./components/openweathermap/icons/outline/13n.svg')];
+    }
+
+    .o50d {
+        @apply bg-[url('./components/openweathermap/icons/outline/50d.svg')];
+    }
+
+    .o50n {
+        @apply bg-[url('./components/openweathermap/icons/outline/50n.svg')];
+    }
+
+    .f000 {
+        @apply bg-[url('./components/openweathermap/icons/fill/000.svg')];
+    }
+
+    .f01d {
+        @apply bg-[url('./components/openweathermap/icons/fill/01d.svg')];
+    }
+
+    .f01n {
+        @apply bg-[url('./components/openweathermap/icons/fill/01n.svg')];
+    }
+
+    .f02d {
+        @apply bg-[url('./components/openweathermap/icons/fill/02d.svg')];
+    }
+
+    .f02n {
+        @apply bg-[url('./components/openweathermap/icons/fill/02n.svg')];
+    }
+
+    .f03d {
+        @apply bg-[url('./components/openweathermap/icons/fill/03d.svg')];
+    }
+
+    .f03n {
+        @apply bg-[url('./components/openweathermap/icons/fill/03n.svg')];
+    }
+
+    .f04d {
+        @apply bg-[url('./components/openweathermap/icons/fill/04d.svg')];
+    }
+
+    .f04n {
+        @apply bg-[url('./components/openweathermap/icons/fill/04n.svg')];
+    }
+
+    .f09d {
+        @apply bg-[url('./components/openweathermap/icons/fill/09d.svg')];
+    }
+
+    .f09n {
+        @apply bg-[url('./components/openweathermap/icons/fill/09n.svg')];
+    }
+
+    .f10d {
+        @apply bg-[url('./components/openweathermap/icons/fill/10d.svg')];
+    }
+
+    .f10n {
+        @apply bg-[url('./components/openweathermap/icons/fill/10n.svg')];
+    }
+
+    .f11d {
+        @apply bg-[url('./components/openweathermap/icons/fill/11d.svg')];
+    }
+
+    .f11n {
+        @apply bg-[url('./components/openweathermap/icons/fill/11n.svg')];
+    }
+
+    .f13d {
+        @apply bg-[url('./components/openweathermap/icons/fill/13d.svg')];
+    }
+
+    .f13n {
+        @apply bg-[url('./components/openweathermap/icons/fill/13n.svg')];
+    }
+
+    .f50d {
+        @apply bg-[url('./components/openweathermap/icons/fill/50d.svg')];
+    }
+
+    .f50n {
+        @apply bg-[url('./components/openweathermap/icons/fill/50n.svg')];
+    }
+}
+
+@layer utilities {
+    .flip-3d {
+        @apply perspective-distant;
+    }
+
+    .flip-card {
+        @apply transform-gpu transform-3d will-change-transform transition-transform duration-500 ease-out;
+    }
+
+    .flip-3d:hover .flip-card,
+    .flip-3d:focus-within .flip-card {
+        @apply rotate-y-180;
+    }
+
+    .flip-face {
+        @apply backface-hidden;
+    }
+
+    .flip-back {
+        @apply rotate-y-180 bg-slate-950;
+    }
+}
