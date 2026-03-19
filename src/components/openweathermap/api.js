@@ -1,6 +1,6 @@
 export async function currentWeatherMap(q) {
     try {
-        const response = await fetch(`https://mkgpdev-backend.vercel.app/api/owm/weather?q=${q.trim()}`);
+        const response = await fetch(`https://api.mkgpdev.xyz/v1/weather?q=${q.trim()}`);
         const d = await response.json();
 
         if (!response.ok) return { cod: response.status, message: d.error.message || response.statusText };
@@ -14,7 +14,7 @@ export async function currentWeatherMap(q) {
 
 export async function weatherForecast(q) {
     try {
-        const response = await fetch(`https://mkgpdev-backend.vercel.app/api/owm/forecast?q=${q.trim()}`);
+        const response = await fetch(`https://api.mkgpdev.xyz/v1/weather?forecast=${q.trim()}`);
         const d = await response.json();
 
         if (!response.ok) return { cod: response.status, message: d.error.message || response.statusText };
